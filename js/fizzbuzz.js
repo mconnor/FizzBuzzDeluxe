@@ -20,7 +20,7 @@ var fizzbuzz = (function() {
 			direc = 'right',
 			cols 	= 8,
 			rows 	= 8,
-			max 	= cols*rows+6,
+			max 	= cols*rows,
 			colCount = 1,
 			rowCount = 0,
 			leftCol	 = 1, 
@@ -84,6 +84,7 @@ var fizzbuzz = (function() {
 					} else {
 						//cols--;
 						direc = 'down';
+						rowCount++;
 					}
 				break;
 				case 'down':
@@ -93,6 +94,7 @@ var fizzbuzz = (function() {
 						//topRow--;
 						rows--;
 						cols--;
+						colCount--;
 						direc = 'left';
 					}
 				break;
