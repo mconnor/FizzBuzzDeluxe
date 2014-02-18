@@ -31,40 +31,22 @@ var fizzbuzz = (function() {
 			$box = {};
 		
 			if (i % 3 === 0 &&  i % 5 === 0 ){
-				//$('<span class="fizz-buzz">fizz-buzz</span>').appendTo($box);
-				//$box = $( '<span class="fizz-buzz">fizz-buzz</span>' );
 				$box = $( '<span class="fizz-buzz">' + i +  '</br>fizz-buzz</span>');
 			} 
 			else {
 				if ( i % 3 === 0 ) {
 					
-					//$box = $(  '<span class="fizz">fizz</span>' );
 					$box = $( '<span class="fizz">'+i+  '</br>fizz</span>');
 				} 
 				else  if ( i % 5 === 0 ) {
-					
-					//$box = $( '<span class="buzz">buzz</span>' );
 					$box = $( '<span class="buzz">'+i +  '</br>buzz</span>');
 				} 
 				else {
 					$box = $('<span class="num">'+i+'</span>');
 				}
 			}
-			
-			//$box.css( 'left' , boxW * ( colCount)+'px' );
-			//$box.css( 'top' , boxW * (rowCount )+'px' );
-
-			//hexString = yourNumber.toString(16);
-
 			var color = Math.max(0 , 255 - i*2 ).toString(16);
-/*
-			$box.animate(
-				{ 
-					left : boxW * ( colCount)+'px',
-					top : boxW * (rowCount )+'px'
-				}, 5000, 'swing', true
-				);
-*/
+
 			$box.css( 'background-color' , '#'+ 'ff' + color + color);
 			$box.css( 'left' , '200px');
 			$box.css( 'top' , '200px');
@@ -82,7 +64,6 @@ var fizzbuzz = (function() {
 					if ( colCount < cols ){
 						colCount++;
 					} else {
-						//cols--;
 						direc = 'down';
 						rowCount++;
 					}
@@ -91,7 +72,6 @@ var fizzbuzz = (function() {
 					if ( rowCount < rows - 1  ) {
 						rowCount++;
 					} else {
-						//topRow--;
 						rows--;
 						cols--;
 						colCount--;
@@ -106,7 +86,6 @@ var fizzbuzz = (function() {
 						rowCount--;
 						topRow++;
 						direc = 'up';
-						//leftCol++;
 					}
 
 				break;
@@ -115,7 +94,7 @@ var fizzbuzz = (function() {
 						rowCount--;
 
 					} else {
-						//topRow++;
+
 						leftCol++;
 						colCount++;
 						direc = 'right';
