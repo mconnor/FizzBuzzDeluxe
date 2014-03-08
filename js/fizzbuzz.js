@@ -36,13 +36,13 @@ var fizzbuzz = (function() {
 			else {
 				if ( i % 3 === 0 ) {
 					
-					$box = $( '<span class="fizz">'+i+  '</br>fizz</span>');
+					$box = $( '<span class="fizz">' + i +  '</br>fizz</span>');
 				} 
 				else  if ( i % 5 === 0 ) {
-					$box = $( '<span class="buzz">'+i +  '</br>buzz</span>');
+					$box = $( '<span class="buzz">' + i +  '</br>buzz</span>');
 				} 
 				else {
-					$box = $('<span class="num">'+i+'</span>');
+					$box = $('<span class="num">' + i + '</span>');
 				}
 			}
 			var color = Math.max(0 , 255 - i*2 ).toString(16);
@@ -62,41 +62,41 @@ var fizzbuzz = (function() {
 			switch (direc) {
 				case 'right':
 					if ( colCount < cols ){
-						colCount++;
+						colCount += 1;
 					} else {
 						direc = 'down';
-						rowCount++;
+						rowCount += 1;
 					}
 				break;
 				case 'down':
 					if ( rowCount < rows - 1  ) {
-						rowCount++;
+						rowCount += 1;
 					} else {
-						rows--;
-						cols--;
-						colCount--;
+						rows -= 1;
+						cols -= 1;
+						colCount -= 1;
 						direc = 'left';
 					}
 				break;
 				case 'left':
 					if ( colCount > leftCol ){
-						colCount--;
+						colCount -= 1;
 
 					} else {
-						rowCount--;
-						topRow++;
+						rowCount -= 1;
+						topRow += 1;
 						direc = 'up';
 					}
 
 				break;
 				case 'up':
 					if ( rowCount > topRow  ){
-						rowCount--;
+						rowCount -=1;
 
 					} else {
 
-						leftCol++;
-						colCount++;
+						leftCol += 1;
+						colCount += 1;
 						direc = 'right';
 					}
 				break;
