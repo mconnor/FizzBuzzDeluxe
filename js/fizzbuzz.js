@@ -1,120 +1,118 @@
 /*
  * spa.js
  * Root namespace module
-*/
+ */
 
 /*jslint           browser : true,   continue : true,
-  devel  : true,    indent : 2,       maxerr  : 50,
-  newcap : true,     nomen : true,   plusplus : true,
-  regexp : true,    sloppy : true,       vars : false,
-  white  : true
-*/
+ devel  : true,    indent : 2,       maxerr  : 50,
+ newcap : true,     nomen : true,   plusplus : true,
+ regexp : true,    sloppy : true,       vars : false,
+ white  : true
+ */
 /*global $, fizzbuzz */
-var fizzbuzz = (function() {
-	'use strict';
-	var 
-		initModule,
-		container, printFizzBuzz;
-	printFizzBuzz = function (){	
-		var i, $box,
-			direc = 'right',
-			cols 	= 8,
-			rows 	= 8,
-			max 	= cols*rows,
-			colCount = 1,
-			rowCount = 0,
-			leftCol	 = 1, 
-			topRow 	= 0,
-			boxW 	= 50;
-		
-		for (i = 0 ; i < max; i++ ){
-			$box = {};
-		
-			if (i % 3 === 0 &&  i % 5 === 0 ){
-				$box = $( '<span class="fizz-buzz">' + i +  '</br>fizz-buzz</span>');
-			} 
-			else {
-				if ( i % 3 === 0 ) {
-					
-					$box = $( '<span class="fizz">' + i +  '</br>fizz</span>');
-				} 
-				else  if ( i % 5 === 0 ) {
-					$box = $( '<span class="buzz">' + i +  '</br>buzz</span>');
-				} 
-				else {
-					$box = $('<span class="num">' + i + '</span>');
-				}
-			}
-			var color = Math.max(0 , 255 - i*2 ).toString(16);
+var fizzbuzz = (function () {
+    'use strict';
+    var
+        initModule,
+        container, printFizzBuzz;
+    printFizzBuzz = function () {
+        var i, $box,color,
+            direc = 'right',
+            cols = 8,
+            rows = 8,
+            max = cols * rows,
+            colCount = 1,
+            rowCount = 0,
+            leftCol = 1,
+            topRow = 0,
+            boxW = 50;
 
-			$box.css( 'background-color' , '#'+ 'ff' + color + color);
-			$box.css( 'left' , '200px');
-			$box.css( 'top' , '200px');
+        for (i = 0; i < max; i++) {
+           // $box = {};
+            if (i % 3 === 0 && i % 5 === 0) {
+                $box = $('<span class="fizz-buzz">' + i + '</br>fizz-buzz</span>');
+                color = '#ff0';
+            }
+            else {
+                if (i % 3 === 0) {
 
-			TweenLite.to($box, .5, 
-				{ 	left : boxW * ( colCount-1)+'px',
-					top : boxW * (rowCount )+'px',
-					opacity : 1,
-					delay : .1*i
-				} );
+                    $box = $('<span class="fizz">' + i + '</br>fizz</span>');
+                    color = '#f0f';
+                }
+                else if (i % 5 === 0) {
+                    $box = $('<span class="buzz">' + i + '</br>buzz</span>');
+                    color = '#0ff';
+                }
+                else {
+                    $box = $('<span class="num">' + i + '</span>');
+                    color = Math.max(0, 255 - i * 2).toString(16);
+                }
+            }
 
-			
-			switch (direc) {
-				case 'right':
-					if ( colCount < cols ){
-						colCount += 1;
-					} else {
-						direc = 'down';
-						rowCount += 1;
-					}
-				break;
-				case 'down':
-					if ( rowCount < rows - 1  ) {
-						rowCount += 1;
-					} else {
-						rows -= 1;
-						cols -= 1;
-						colCount -= 1;
-						direc = 'left';
-					}
-				break;
-				case 'left':
-					if ( colCount > leftCol ){
-						colCount -= 1;
 
-					} else {
-						rowCount -= 1;
-						topRow += 1;
-						direc = 'up';
-					}
+            $box.css('background-color', '#' + 'ff' + color + color);
+            $box.css('left', '200px');
+            $box.css('top', '200px');
 
-				break;
-				case 'up':
-					if ( rowCount > topRow  ){
-						rowCount -=1;
+            TweenLite.to($box, .5,
+                {
+                    left: boxW * ( colCount - 1) + 'px',
+                    top: boxW * (rowCount ) + 'px',
+                    opacity: 1,
+                    delay: .1 * i
+                });
+            switch (direc) {
+                case 'right':
+                    if (colCount < cols) {
+                        colCount += 1;
+                    } else {
+                        direc = 'down';
+                        rowCount += 1;
+                    }
+                    break;
+                case 'down':
+                    if (rowCount < rows - 1) {
+                        rowCount += 1;
+                    } else {
+                        rows -= 1;
+                        cols -= 1;
+                        colCount -= 1;
+                        direc = 'left';
+                    }
+                    break;
+                case 'left':
+                    if (colCount > leftCol) {
+                        colCount -= 1;
 
-					} else {
+                    } else {
+                        rowCount -= 1;
+                        topRow += 1;
+                        direc = 'up';
+                    }
 
-						leftCol += 1;
-						colCount += 1;
-						direc = 'right';
-					}
-				break;
-			}
-			container.append($box);
-		}
+                    break;
+                case 'up':
+                    if (rowCount > topRow) {
+                        rowCount -= 1;
 
-	};
-	//--------- PUBLIC METHODS
-	initModule = function ( _container ) {
-		container = _container;
-		
-		printFizzBuzz();
+                    } else {
 
-	};
-
-	return {
-		initModule : initModule
-	};
+                        leftCol += 1;
+                        colCount += 1;
+                        direc = 'right';
+                    }
+                    break;
+            }
+            container.append($box);
+        }
+    };
+    //--------- PUBLIC METHODS
+    initModule = function (_container) {
+        container = _container;
+        printFizzBuzz();
+    };
+    return {
+        initModule: initModule
+    };
 
 }());

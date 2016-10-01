@@ -1,55 +1,73 @@
-body { font-size:62.5%; }
-h1 { font-size: 2.4em; } /* =24px */
-p  { font-size: 1.4em; } /* =14px */
-li { font-size: 1.4em; } /* =14px? */
+body {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 2.4em;
+}
+
+/* =24px */
+p {
+    font-size: 1.4em;
+}
+
+/* =14px */
+li {
+    font-size: 1.4em;
+}
+
+/* =14px? */
 
 .num {
-	background-color:#14CC96;
+    background-color: #14CC96;
 }
 
 .fizz {
-	background-color:green;
-	
+    background-color: green;
+
 }
 
 .buzz {
-	background-color:yellow;
-	
+    background-color: yellow;
+
 }
 
 .fizz-buzz {
-	background-color:red;
-	
+    background-color: red;
+
 }
 
 .num, .fizz, .buzz, .fizz-buzz {
-	width: 50px;
-	height: 50px;
-	border-radius: 10px;
-	border: 2px black;
-	border-style: solid;
-	font-size: 12px;
-	text-align: center;
-	vertical-align:middle;
-	float: left;
-	
-	position:absolute;
-	left:100px;
-	opacity: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px black;
+    border-style: solid;
+    font-size: 12px;
+    text-align: center;
+
+    padding-top: 8px;
+    float: left;
+
+    position: absolute;
+    left: 100px;
+    opacity: 0;
 
 }
-#info{
-	width: 800px;
-	text-align:center;
-}
-#container{
-	width: 400px;
-}
-#container, #info{
 
-	margin-left:auto;
-	margin-right:auto;
-	position: relative;
-	
+#info {
+    width: 800px;
+    text-align: center;
+}
+
+#container {
+    width: 400px;
+}
+
+#container, #info {
+
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 
 }

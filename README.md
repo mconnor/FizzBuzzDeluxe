@@ -10,3 +10,4 @@ uses GSAP for animation sparkle
 utilizes the revealing module pattern
 
 View project in action => http://rocketnumber9.org/test/jschallenges/fizzBuzz/fizzbuzz.html
+
