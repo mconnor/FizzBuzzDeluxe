@@ -30,7 +30,7 @@ var fizzbuzz = (function () {
         for (i = 0; i < max; i++) {
            // $box = {};
             if (i % 3 === 0 && i % 5 === 0) {
-                $box = $('<span class="fizz-buzz">' + i + '</br>fizz-buzz</span>');
+                $box = $('<span class="fizz-buzz">' + i + '</br>fizz-</br>buzz</span>');
                 color = '#ff0';
             }
             else {
