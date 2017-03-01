@@ -1,39 +1,33 @@
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>Deluxe Fizz-Buzz</title>
-
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
-	<link rel="stylesheet" type="text/css" href="css/my.css">
-
-
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.1/plugins/CSSPlugin.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.1/easing/EasePack.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.1/TweenLite.min.js"></script>
-
-
-
-	<script type="text/javascript" src="lib/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="js/fizzbuzz.js"></script>
+	<link rel="stylesheet" type="text/css" href="./node_modules/bulma/css/bulma.css">
+	<link rel="stylesheet" type="text/css" href="./css/my.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.1/plugins/CSSPlugin.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.1/easing/EasePack.min.js"></script>
+	<script src="./node_modules/gsap/TweenLite.js"></script>
+	<script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/fizzbuzz.js"></script>
 	<title>Fizz Buzz Sprial Layout</title>
-
 </head>
 <body>
+	<div id="info">
+		<h1><a href='http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html'>Fizz-Buzz</a> animation demo by <a href='http://rocketnumber9.org/contact/'>Mike Connor</a></h1>
+		<p>Fizz = box index is a multiple of 3, buzz = box index is divisible by 5, fizz-buzz = box index is divisible by 3 and 5.
+			</br>Code available on <a href='https://github.com/mconnor/FizzBuzzDeluxe/releases/tag/v1.0.2'>GitHub</a>.
+		</p>
+	</div>
 
-<div id="info"><h1><a href='http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html'>Fizz-Buzz</a> animation demo by <a href='http://rocketnumber9.org/contact/'>Mike Connor</a></h1>
-<p>Fizz = box index is a multiple of 3, buzz =  box index is divisible by 5, fizz-buzz = box index is divisible by 3 and 5.
-</br>Code available on <a href='https://github.com/mconnor/FizzBuzzDeluxe/releases/tag/v1.0.2'>GitHub</a>.
-</p></div>
+	<div id="container"></div>
 
-<div id="container"></div>
+	<script>
+		$(function () {
 
-	 <script>
-    $(function () {
+		  fizzbuzz.initModule($('#container'));
 
-     	fizzbuzz.initModule( $('#container') );
-
-      });
-  </script>
+		});
+	</script>
 </body>
 </html>
