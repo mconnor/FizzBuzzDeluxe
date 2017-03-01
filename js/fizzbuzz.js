@@ -16,7 +16,7 @@ var fizzbuzz = (function() {
     container,
     printFizzBuzz;
   printFizzBuzz = function() {
-    let i,
+    var i,
       $box,
       color,
       direc = 'right',
@@ -82,7 +82,6 @@ var fizzbuzz = (function() {
         case 'left':
           if (colCount > leftCol) {
             colCount -= 1;
-
           } else {
             rowCount -= 1;
             topRow += 1;
@@ -93,9 +92,7 @@ var fizzbuzz = (function() {
         case 'up':
           if (rowCount > topRow) {
             rowCount -= 1;
-
           } else {
-
             leftCol += 1;
             colCount += 1;
             direc = 'right';
