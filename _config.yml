@@ -1,0 +1,8 @@
+title: FizzBuzz-Deluxe
+description: Just a demo should some code logic, the revealing module pattern, and the use of Greensock library for animation.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-tactile
+
+gems:
+  - jekyll-mentions
