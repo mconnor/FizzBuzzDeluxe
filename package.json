@@ -1,6 +1,6 @@
 {
   "name": "FizzBuzzDeluxe",
-  "homepage": "http://rocketnumber9.org/test/jschallenges/fizzBuzz/fizzbuzz.html",
+  "homepage": "https://github.com/mconnor/FizzBuzzDeluxe",
   "version": "1.0.1",
   "description": "basic coding exercise",
   "main": "fizzbuzz.js",
