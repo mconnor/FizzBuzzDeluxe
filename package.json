@@ -7,7 +7,4 @@
   "repository": "https://mconnor@github.com/mconnor/FizzBuzzDeluxe.git",
   "author": "mike connor <mike@rocketnumber9.org>",
   "license": "MIT",
-  "dependencies": {
-    "bulma": "^0.8.0",
-  }
 }
