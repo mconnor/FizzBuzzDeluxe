@@ -1,29 +1,38 @@
 <html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>Deluxe Fizz-Buzz</title>
-	<link rel="stylesheet" type="text/css" href="./node_modules/bulma/css/bulma.css">
-	<link rel="stylesheet" type="text/css" href="./css/my.css">
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.1/plugins/CSSPlugin.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.1/easing/EasePack.min.js"></script>
-	<script src="./node_modules/gsap/TweenLite.js"></script>
-	<script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="./js/fizzbuzz.js"></script>
-	<title>Fizz Buzz Spiral Layout</title>
+    <meta charset="UTF-8">
+    <title>Deluxe Fizz-Buzz</title>
+    <link rel="stylesheet" type="text/css" href="./node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="./css/my.css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.1/plugins/CSSPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.1/easing/EasePack.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="./js/fizzbuzz.js"></script>
+    <title>Fizz Buzz Spiral Layout</title>
 </head>
+
 <body>
-	<div id="info">
-		<h1><a href='http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html'>Fizz-Buzz</a> animation demo by <a href='http://rocketnumber9.org/contact/'>Mike Connor</a></h1>
-		<p>Fizz =  box index is a multiple of 3, buzz = box index is divisible by 5, fizz-buzz = box index is divisible by 3 and 5.
-			</br>Code available on <a href='https://github.com/mconnor/FizzBuzzDeluxe/releases/tag/v1.0.2'>GitHub</a>.
-		</p>
-	</div>
-	<div id="container"></div>
-<script>
-	/* global $, fizzbuzz */
-$(function () {
-  fizzbuzz.initModule($('#container'));
-});
-</script>
+    <div id="info">
+        <h1><a href='http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html'>Fizz-Buzz</a> animation
+            demo by <a href='http://rocketnumber9.org/contact/'>Mike Connor</a></h1>
+        <p>Fizz = box index is a multiple of 3, buzz = box index is divisible by 5, fizz-buzz = box index is divisible
+            by 3 and 5.
+            </br>Code available on <a href='https://github.com/mconnor/FizzBuzzDeluxe/releases/tag/v1.0.2'>GitHub</a>.
+        </p>
+    </div>
+    <div id="container"></div>
+    <script>
+        /* global $, fizzbuzz */
+        $(function () {
+            fizzbuzz.initModule($('#container'));
+        });
+    </script>
 </body>
+
 </html>

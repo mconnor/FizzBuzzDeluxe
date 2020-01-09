@@ -8,8 +8,8 @@
   "author": "mike connor <mike@rocketnumber9.org>",
   "license": "MIT",
   "dependencies": {
-    "bulma": "^0.3.2",
-    "gsap": "^1.19.1",
-    "jquery": "^3.1.1"
+    "bulma": "^0.8.0",
+    "gsap": "^3.0.5",
+    "jquery": "^3.4.1"
   }
 }
