@@ -9,7 +9,5 @@
   "license": "MIT",
   "dependencies": {
     "bulma": "^0.8.0",
-    "gsap": "^3.0.5",
-    "jquery": "^3.4.1"
   }
 }
